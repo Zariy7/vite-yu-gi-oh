@@ -1,7 +1,5 @@
 <script>
-import axios from 'axios';
 import { store } from '../store.js';
-
 import SingleCard from './SingleCard.vue';
 
 export default {
@@ -13,19 +11,6 @@ export default {
         return{
             store,
         }
-    },
-    methods: {
-        drawCards(){
-            axios.get(store.endpoint).then((response) =>{
-                this.store.cards = response.data.data;
-                //console.log(response.data.data);
-                store.loading = !store.loading;
-                //console.log(store.loading);
-            })
-        }
-    },
-    created() {
-        this.drawCards();
     }
 }
 </script>
@@ -38,6 +23,5 @@ export default {
     </div>
 </template>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
 </style>

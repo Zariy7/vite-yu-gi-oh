@@ -1,13 +1,6 @@
 <script>
-import { store } from '../store.js';
-
 export default {
     name: 'AppLoader',
-    data(){
-        return{
-            store,
-        }
-    }
 }
 </script>
 
