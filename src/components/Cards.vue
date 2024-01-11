@@ -17,22 +17,25 @@ export default {
     methods: {
         drawCards(){
             axios.get(store.endpoint).then((response) =>{
-                this.store = response.data.result;
+                this.store.cards = response.data.data;
+                console.log(response.data.data);
             })
         }
     },
     created() {
         this.drawCards();
-        console.log(this.drawCards());
     }
 }
 </script>
 
 <template>
-    <div>
-        Cards
+    <div class="container">
+        <div class="row">
+            <SingleCard v-for="card, index in store.cards" :key="index" :card="card" />
+        </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
 </style>
