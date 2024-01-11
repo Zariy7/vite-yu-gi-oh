@@ -1,13 +1,13 @@
 <script>
 export default {
-    name: 'AppHeader',
+    name: 'SingleCards',
+    props: {
+        card: Object,
+    }
 }
 </script>
 
 <template>
-    <div>
-        Header
-    </div>
 </template>
 
 <style lang="scss" scoped>
