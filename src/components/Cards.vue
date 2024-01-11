@@ -18,7 +18,9 @@ export default {
         drawCards(){
             axios.get(store.endpoint).then((response) =>{
                 this.store.cards = response.data.data;
-                console.log(response.data.data);
+                //console.log(response.data.data);
+                store.loading = !store.loading;
+                //console.log(store.loading);
             })
         }
     },
