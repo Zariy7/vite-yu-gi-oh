@@ -20,7 +20,6 @@ export default {
             let filter = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=';
             
             if(store.archetypeSearch != ''){
-                store.archetypeSearch = store.archetypeSearch.replaceAll(' ', '%20');
                 filter += store.archetypeSearch;
                 //console.log(filter);
 
@@ -30,7 +29,6 @@ export default {
                     //console.log(store.cards);
                 })
             }
-
         }
     },
     created(){
