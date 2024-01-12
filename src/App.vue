@@ -20,7 +20,7 @@ export default {
   },
     methods: {
         drawCards(){
-            axios.get(store.endpoint).then((response) =>{
+            axios.get(store.cardsEndpoint).then((response) =>{
                 this.store.cards = response.data.data;
                 //console.log(response.data.data);
                 store.loading = !store.loading;
