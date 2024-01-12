@@ -6,4 +6,5 @@ export const store = reactive({
     cards: [],
     archetypes: [],
     loading: true,
+    archetypeSearch: '',
 })
